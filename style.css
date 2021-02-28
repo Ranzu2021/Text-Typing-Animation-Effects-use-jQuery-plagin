@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(241, 15, 192);
+}
+.contentBx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: auto;
+    background: rgba(59, 8, 243, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 200px #fff;
+}
+.contentBx p {
+    color: #fff;
+    text-transform: capitalize;
+}
+.content .char {
+    visibility: hidden;
+    animation: animate 0s steps(2) forwards;
+    animation-duration: calc(0.04s * var(--char-index));
+}
+@keyframes animate {
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
